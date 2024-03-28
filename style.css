@@ -6,11 +6,10 @@
 
 h1,
 h2,
-h3,
-{
-font-family: "Alfa Slab One", serif;
-font-weight: 400;
-font-style: normal;
+h3 {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 p,
@@ -30,7 +29,6 @@ body {
 
 .nav_bg {
     background-color: var(--third-color);
-    position: fixed;
     width: 100%;
     height: 80px;
     transition: 400ms;
@@ -51,6 +49,19 @@ body {
 
 .nav_blur {
     backdrop-filter: blur(7px), saturate(0.8);
-    background-color: rgba(58, 65, 67, 0.8);
-    border: 1px solid var(--main-color);
+    background-color: var(--sec-color);
+    border: 3px solid var(--main-color);
+}
+
+header {
+    background-image: url(./media/marcos-rivas-496Nw45mkg4-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: 80px;
+
+}
+
+.intro {
+    height: 100vh;
 }
