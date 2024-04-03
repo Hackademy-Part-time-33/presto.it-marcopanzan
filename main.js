@@ -37,7 +37,7 @@ let primonumero = document.querySelector('#primonumero');
 let secondonumero = document.querySelector('#secondonumero');
 let terzonumero = document.querySelector('#terzonumero');
 
-
+/* funzione contatore numeri */
 function createinterval(number, elemnt, speed) {
     let count = 0;
     let interval = setInterval(() => {
@@ -51,18 +51,36 @@ function createinterval(number, elemnt, speed) {
     }, speed);
 
 }
-
+/* funzione intercettazione punto della pagina in cui cominciare il conteggio */
 let confirm = false
 
 let observer = new IntersectionObserver((entries) => {
     entries.forEach((entrie) => {
         if (confirm == false && entrie.isIntersecting) {
-            createinterval(3000, primonumero, 15);
-            createinterval(5000, secondonumero, 10);
-            createinterval(1000, terzonumero, 20);
+            /* richiamo la funzione contatore */
+            createinterval(3000, primonumero, 3);
+            createinterval(9000, secondonumero, 1);
+            createinterval(50, terzonumero, 150);
             confirm = true;
         }
     })
 })
 
 observer.observe(primonumero)
+
+
+/* swiper */
+const swiper = new Swiper('.swiper', {
+    speed: 600,
+    parallax: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
