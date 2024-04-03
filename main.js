@@ -32,9 +32,37 @@ function changenavbar(background, color1, color2, color3, imglogo,) {
     })
 
 }
+/* contatore numeri */
+let primonumero = document.querySelector('#primonumero');
+let secondonumero = document.querySelector('#secondonumero');
+let terzonumero = document.querySelector('#terzonumero');
 
-'./media/logo-white.png'
-'/media/logo-no-background.png'
 
-"http://127.0.0.1:5500/media/logo-no-background.png"
-    `http://127.0.0.1:5500/media/${imgLogo}`
+function createinterval(number, elemnt, speed) {
+    let count = 0;
+    let interval = setInterval(() => {
+        if (count < number) {
+            count++
+            elemnt.innerHTML = count;
+        }
+        else {
+            clearInterval(interval);
+        }
+    }, speed);
+
+}
+
+let confirm = false
+
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entrie) => {
+        if (confirm == false && entrie.isIntersecting) {
+            createinterval(3000, primonumero, 15);
+            createinterval(5000, secondonumero, 10);
+            createinterval(1000, terzonumero, 20);
+            confirm = true;
+        }
+    })
+})
+
+observer.observe(primonumero)

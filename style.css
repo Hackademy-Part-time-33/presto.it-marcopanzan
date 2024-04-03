@@ -1,5 +1,5 @@
 :root {
-    --main-color: #e8ef11;
+    --main-color: #F9D24F;
     --sec-color: #000606;
     --third-color: #ffffff;
 }
@@ -64,4 +64,14 @@ header {
 
 .intro {
     height: 100vh;
+}
+
+.btn_search {
+    border: none;
+}
+
+.imgStory {
+    height: 700px;
+    width: 500px;
+
 }
