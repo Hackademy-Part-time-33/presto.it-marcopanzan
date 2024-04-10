@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>presto.it</title>
+    <!-- cdn bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- cdn aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <!-- bootsrap icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md z-3 mynav fixed-top nav_bg " aria-label="Fourth navbar example">
+        <div class="container-fluid wv-100">
+            <span>
+                <img src="./media/logo-no-background.png" alt="logo-img" width="65px" class="img_logo">
+            </span>
+
+            <button class=" btn navbar-toggler toggler_icon" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="true"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav ps-3 me-auto mb-2 mb-md-0 ">
+                    <li class="nav-item px-3 anm_link ">
+                        <a class="nav_link title_txt " href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item px-3 anm_link">
+                        <a class="nav_link title_txt " href="#">Prodotti</a>
+                    </li>
+                    <li class="nav-item px-3 anm_link">
+                        <a class="nav_link title_txt " href="#">Recensioni</a>
+                    </li>
+                    <li class="nav-item px-3 anm_link">
+                        <a class="nav_link title_txt " href="#">Contatti</a>
+                    </li>
+
+                </ul>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn main_c main_bg_c title_txt nav_link anm_link " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="bi bi-bag-fill"></i>
+                    shop now !
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- titolo -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center titleAnnunci">
+                <h1>I NOSTRI PRODOTTI</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- facciamo le due sezioni: nella prima sezione mettiamo i nostri filtri, nella seconda mettiamo i nostri prodotti -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- sezione con i filtri -->
+            <div class="col-12 col-md-3 my-3">
+                <div class="mb-3"><i class="fa-solid fa-filter"></i> Imposta un filtro</div>
+                <div class="accordion accordion-flush border" id="accordionFlushExample">
+
+                    <!-- primo accordion -->
+                    <div class="accordion-item accordion-custom">
+                        <!-- titolo accordion -->
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed accordion-custom" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                CATEGORIE
+                            </button>
+                        </h2>
+                        <!-- filtro accordion per categorie -->
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div id="categoryWrapper" class="accordion-body">
+
+                                <!-- form check radio -->
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="category" id="all" checked>
+                                    <label class="form-check-label" for="all">
+                                        Tutte le categorie
+                                    </label>
+                                </div>
+                                <!-- fine form check -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- secondo accordion -->
+                    <div class="accordion-item accordion-custom">
+                        <!-- secondo accordion -->
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed accordion-custom" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                PREZZO
+                            </button>
+                        </h2>
+                        <!-- contenuto secondo filtro -->
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <p>Inposta un range di prezzo</p>
+                                <input id="inputRange" class="w-100 range-custom" type="range">
+                                <p id="textPrice"></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- terzo accordion -->
+                    <div class="accordion-item accordion-custom">
+                        <!-- titolo terzo accordion -->
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed accordion-custom" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                PAROLA
+                            </button>
+                        </h2>
+                        <!-- contenuto terzo filtro -->
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <p>Digita quello che cerci</p>
+                                <input id="inputWord" class="form-control word-custom" type="text">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- sezione con le card degli articoli -->
+            <div class="col-12 col-md-9">
+
+                <!-- griglia card articoli -->
+
+                <div id="cardWrapper" class="d-flex flex-wrap justify-content-evenly">
+
+                    <!-- card con gli annunci -->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="foot d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-12 col-md-3 d-flex  flex-column align-items-center justify-content-center">
+                    <h3>PRODOTTI</h3>
+                    <ul>
+                        <li>Scarpe</li>
+                        <li>Felpe</li>
+                        <li>Maglie</li>
+                        <li>Pantaloni</li>
+                        <li>Giacche</li>
+                        <li>Tute</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column align-items-center justify-content-center">
+                    <h3>COLLEGAMENTI</h3>
+                    <ul>
+                        <li>FootLooker</li>
+                        <li>Yoox</li>
+                        <li>Zalando</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column align-items-center justify-content-center">
+                    <h3>COLLEZIONI</h3>
+                    <ul>
+                        <li>Original</li>
+                        <li>Premium</li>
+                        <li>Best</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column align-items-center justify-content-center">
+                    <h3>SEGUICI</h3>
+                    <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-square-instagram"></i></li>
+                        <li><i class="fa-brands fa-pinterest"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <!-- fontawesomejs -->
+    <script src="https://kit.fontawesome.com/a62d991c83.js" crossorigin="anonymous"></script>
+    <!-- my js -->
+
+    <script src="annunci.js">
+    </script>
+</body>
+
+</html>

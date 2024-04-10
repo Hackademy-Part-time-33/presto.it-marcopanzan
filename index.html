@@ -42,10 +42,10 @@
             <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav ps-3 me-auto mb-2 mb-md-0 ">
                     <li class="nav-item px-3 anm_link ">
-                        <a class="nav_link title_txt " href="#">Home</a>
+                        <a class="nav_link title_txt " href="./index.html">Home</a>
                     </li>
                     <li class="nav-item px-3 anm_link">
-                        <a class="nav_link title_txt " href="#">Prodotti</a>
+                        <a class="nav_link title_txt " href="./annunci.html">Prodotti</a>
                     </li>
                     <li class="nav-item px-3 anm_link">
                         <a class="nav_link title_txt " href="#">Recensioni</a>
@@ -110,83 +110,109 @@
                 <div class="col-12 col-md-6">
                     <h3>I nostri numeri</h3>
                     <p class="lead">
-                        <span id="primonumero">0</span> Clienti soddisfatti
+                        <span class="numero" id="primonumero">0</span> Clienti soddisfatti
                     </p>
                     <p class="lead">
-                        <span id="secondonumero">0</span> Prodotti venduti
+                        <span class="numero" id="secondonumero">0</span> Prodotti venduti
                     </p>
                     <p class="lead">
-                        <span id="terzonumero">0</span> Aziende partner
+                        <span class="numero" id="terzonumero">0</span> Aziende partner
                     </p>
                 </div>
             </div>
             <!-- SWIPER -->
         </section>
 
-        <section class="container pt-5">
-            <div class="row vh-100 d-flex align-items-center justify-content-center">
-                <div class="col-12">
-                    <h2>Dicono di noi</h2>
-                </div>
+        <section class="container py-5">
+            <div class="row  d-flex align-items-center justify-content-center">
+
                 <div class="col-12 col-md-10">
+                    <div class="col-12">
+                        <h2>Dicono di noi</h2>
+                    </div>
                     <!-- Slider main container -->
                     <div class="swiper">
                         <!-- Additional required wrapper -->
-                        <div class="parallax-bg">
-                            <!--  -->
-                        </div>
+                        <div class="parallax-bg" ; " data-swiper-parallax=" -23%"></div>
                         <div class="swiper-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide">
-                                <div class="title" data-swiper-parallax="-300">Franco</div>
-                                <div class="subtitle" data-swiper-parallax="-200">non si sende il piede</div>
-                                <div class="text" data-swiper-parallax="-100">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                                        dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                                        laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="title" data-swiper-parallax="-300">Elia</div>
-                                <div class="subtitle" data-swiper-parallax="-200">fantastico</div>
-                                <div class="text" data-swiper-parallax="-100">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                                        dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                                        laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="title" data-swiper-parallax="-300">Marco</div>
-                                <div class="subtitle" data-swiper-parallax="-200">Sto ancora aspettando le scarpe</div>
-                                <div class="text" data-swiper-parallax="-100">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                                        dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
                     </div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-
                 </div>
             </div>
         </section>
+
+        <!-- inserisci le recensioni -->
+        <section class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h3>Inserici recensione</h3>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div>
+                        <label for="userName">Nome</label>
+                        <input id="userName" type="text" class="form-control">
+                    </div>
+                    <div>
+                        <label for="userTitle">Titolo</label>
+                        <input id="userTitle" type="text" class="form-control">
+                    </div>
+                    <div>
+                        <label for="userDescription">Descrizione</label>
+                        <input id="userDescription" type="text" class="form-control">
+                    </div>
+                    <div class="mt-2 d-flex justify-content-end">
+                        <button id="addReviews" class="btn btn-custom">Invia</button>
+                    </div>
+                </div>
+            </div>
     </main>
+
+    <footer class="foot bg-Gold txt-White d-flex align-items-center pt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 d-flex  flex-column ">
+                    <h3>PRODOTTI</h3>
+                    <ul>
+                        <li>Scarpe</li>
+                        <li>Felpe</li>
+                        <li>Maglie</li>
+                        <li>Pantaloni</li>
+                        <li>Giacche</li>
+                        <li>Tute</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column ">
+                    <h3>COLLEGAMENTI</h3>
+                    <ul>
+                        <li>FootLooker</li>
+                        <li>Yoox</li>
+                        <li>Zalando</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column ">
+                    <h3>COLLEZIONI</h3>
+                    <ul>
+                        <li>Original</li>
+                        <li>Premium</li>
+                        <li>Best</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 d-flex flex-column ">
+                    <h3>SEGUICI</h3>
+                    <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-square-instagram"></i></li>
+                        <li><i class="fa-brands fa-pinterest"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -199,6 +225,8 @@
     </script>
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fontawesomejs -->
+    <script src="https://kit.fontawesome.com/a62d991c83.js" crossorigin="anonymous"></script>
     <!-- my js -->
     <script src="main.js"></script>
 </body>

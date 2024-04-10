@@ -1,3 +1,4 @@
+/* navbar */
 let nav = document.querySelector('.mynav');
 let linkNav = document.querySelectorAll('.nav_link');
 let imgLogo = document.querySelector('.img_logo')
@@ -52,7 +53,7 @@ function createinterval(number, elemnt, speed) {
 
 }
 /* funzione intercettazione punto della pagina in cui cominciare il conteggio */
-let confirm = false
+let confirm = false;
 
 let observer = new IntersectionObserver((entries) => {
     entries.forEach((entrie) => {
@@ -64,15 +65,16 @@ let observer = new IntersectionObserver((entries) => {
             confirm = true;
         }
     })
-})
+});
 
-observer.observe(primonumero)
+observer.observe(primonumero);
 
 
 /* swiper */
 const swiper = new Swiper('.swiper', {
     speed: 600,
     parallax: true,
+
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -82,5 +84,53 @@ const swiper = new Swiper('.swiper', {
         prevEl: ".swiper-button-prev",
     },
 });
+/* recensioni */
+let reviews = [
+    { name: "Elia", title: "La mia piu' bella esperienza", description: "bellissima esperienza personale gentile, preparato, rapido , prezzi onestissimi" },
+    { name: "Vincenzo", title: "Pessima esperienza", description: "sito digustoso e poco professionale" },
+    { name: "Laura", title: "Esperienza COOL", description: "Accoglienza top, qualita' prodotti eccellente, lenta la spedizione " },
+    { name: "Stefano", title: "Bello", description: "TOP!! :) " },
+    { name: "Giammarco", title: "Altrove si trova di meglio", description: "le scarpe si sono rotte dopo 2 giorni! SCONSIGLIATO :(" },
+    { name: "Rocco", title: "Bellissima esperienza", description: "Abbiamo mangiato bene ma i camerieri non sono stati professionali, comodo per il mordi e fuggi" },
+];
+
+let swiperWrapper = document.querySelector(".swiper-wrapper");
+let addReviews = document.querySelector("#addReviews");
+let userName = document.querySelector("#userName");
+let userTitle = document.querySelector("#userTitle");
+let userDescription = document.querySelector("#userDescription");
+
+
+function generateCars() {
+    swiperWrapper.innerHTML = '';
+    reviews.forEach((review) => {
+        let div = document.createElement('div');
+        div.classList.add('swiper-slide');
+        div.innerHTML = `
+        <div class="title" data-swiper-parallax="-300">${review.name}</div>
+        <div class="subtitle" data-swiper-parallax="-200">${review.title}</div>
+        <div class="text" data-swiper-parallax="-100">
+          <p>
+            ${review.description}
+          </p>
+        </div>
+        `
+        swiperWrapper.appendChild(div);
+    });
+}
+generateCars();
+
+addReviews.addEventListener("click", () => {
+    reviews.push({ name: userName.value, title: userTitle.value, description: userDescription.value });
+    generateCars();
+    userName.value = '';
+    userTitle.value = '';
+    userDescription.value = '';
+    swiper.update();
+});
+
+fetch("./annunci.json").then((data) => Response.json()).then(data)
+
+console.log(data)
 
 
