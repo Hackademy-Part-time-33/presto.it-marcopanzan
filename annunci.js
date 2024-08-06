@@ -7,13 +7,13 @@ console.dir(imgLogo)
 window.addEventListener('scroll', () => {
     let = scrolled = window.scrollY;
     if (scrolled > 0) {
-        changenavbar('nav_blur', 'var(--main-color)', ' 1px solid var(--main-color)', 'transparent', 'logo-white');
 
+        changenavbar('nav_bg', 'var(--sec-color)', 'transparent', 'transparent', 'logo-no-background')
 
     }
     else {
         nav.classList.remove('nav_blur');
-        changenavbar('nav_bg', 'var(--sec-color)', 'transparent', 'transparent', 'logo-no-background')
+        changenavbar('nav_blur', 'var(--main-color)', ' 1px solid var(--main-color)', 'transparent', 'logo-white');
     }
 
 })

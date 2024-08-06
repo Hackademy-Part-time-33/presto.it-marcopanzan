@@ -129,8 +129,4 @@ addReviews.addEventListener("click", () => {
     swiper.update();
 });
 
-fetch("./annunci.json").then((data) => Response.json()).then(data)
-
-console.log(data)
-
 
